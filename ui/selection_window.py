@@ -8,10 +8,9 @@ class SelectionWindow(QWidget):
         super().__init__()
         self.on_selected = on_selected
         
-        # 枠線描画用の変数
-        self.start_point = QPoint()
-        self.end_point = QPoint()
-        self.is_drawing = False
+        # ---- キャプチャ用 (画面全体の絶対座標) ----
+        self.global_start = QPoint()
+        self.global_end = QPoint()
 
         self.init_ui()
 
@@ -53,31 +52,36 @@ class SelectionWindow(QWidget):
 
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:
-            self.start_point = event.position().toPoint()
+            # キャプチャ用: ウィンドウの影響を受けない画面全体の絶対座標
+            self.global_start = event.globalPosition().toPoint()
+            self.global_end = self.global_start
+            
+            # 描画用: その絶対座標を、このウィジェット上のローカル座標へ変換
+            self.start_point = self.mapFromGlobal(self.global_start)
             self.end_point = self.start_point
+            
             self.is_drawing = True
             self.update()
 
     def mouseMoveEvent(self, event):
         if self.is_drawing:
-            self.end_point = event.position().toPoint()
+            # ドラッグ中は描画用と絶対座標の両方を更新
+            self.global_end = event.globalPosition().toPoint()
+            self.end_point = self.mapFromGlobal(self.global_end)
             self.update()
 
     def mouseReleaseEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton and self.is_drawing:
-            self.end_point = event.position().toPoint()
+            self.global_end = event.globalPosition().toPoint()
+            self.end_point = self.mapFromGlobal(self.global_end)
             self.is_drawing = False
             self.update()
             
-            local_rect = QRect(self.start_point, self.end_point).normalized()
+            capture_rect = QRect(self.global_start, self.global_end).normalized()
             # 一定サイズ以上の領域が選択された場合のみコールバックを呼ぶ
-            if local_rect.width() > 10 and local_rect.height() > 10:
-                # 描画用のローカル座標を、実際の画面キャプチャ用（mss等）のグローバル絶対座標に変換する
-                global_top_left = self.mapToGlobal(local_rect.topLeft())
-                global_bottom_right = self.mapToGlobal(local_rect.bottomRight())
-                global_rect = QRect(global_top_left, global_bottom_right)
-                
-                self.on_selected(global_rect)
+            if capture_rect.width() > 10 and capture_rect.height() > 10:
+                # 完全に一致した絶対座標をコールバックに渡す
+                self.on_selected(capture_rect)
             else:
                 # キャンセル処理：閉じる
                 self.close()
