@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live AreaTranslator — Real-Time Screen Translation for macOS & Windows</title>
+    <meta name="description" content="Translate any text on your screen in real-time. Select an area, and Live AreaTranslator instantly translates it with a beautiful floating overlay. Free download for macOS & Windows.">
+    <meta name="keywords" content="screen translator, real-time translation, macOS app, Windows app, OCR translation, live translation, area translator">
+    <meta property="og:title" content="Live AreaTranslator — Real-Time Screen Translation">
+    <meta property="og:description" content="Translate any text on your screen in real-time. Free download for macOS & Windows.">
+    <meta property="og:image" content="screenshot.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="icon.png" alt="Logo" class="nav-logo-img">
+                <span>Live AreaTranslator</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#download" class="nav-cta">Download Free</a>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ Free for macOS & Windows</div>
+            <h1>Translate Your Screen<br><span class="gradient-text">In Real Time</span></h1>
+            <p class="hero-subtitle">
+                Select any area on your screen, and instantly see translations in a sleek floating overlay.
+                Powered by advanced OCR and AI — no copy-paste needed.
+            </p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Free
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">FPS Capture</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-glow"></div>
+            <img src="screenshot.png" alt="Live AreaTranslator in action" class="hero-screenshot">
+        </div>
+    </section>
+
+    <!-- 広告スペース 1 -->
+    <div class="ad-container" id="ad-top">
+        <div class="ad-placeholder">
+            <span>Ad Space — Replace with Google AdSense code</span>
+        </div>
+    </div>
+
+    <!-- 特徴セクション -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">Features</div>
+                <h2>Everything You Need for<br><span class="gradient-text">Seamless Translation</span></h2>
+                <p>No more switching between tabs and translation tools. Live AreaTranslator works directly on your screen.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Translation</h3>
+                    <p>Continuously monitors your selected area and translates new text as it appears. Up to 30fps capture speed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Area Selection</h3>
+                    <p>Drag to select any region on your screen. The floating overlay shows translations without blocking your view.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Native OCR</h3>
+                    <p>Uses each OS's built-in OCR engine — Apple Vision on macOS, Windows.Media.Ocr on Windows. No external install required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>10+ Languages</h3>
+                    <p>Supports Japanese, English, Korean, Chinese, Spanish, French, German, Italian, Portuguese, Russian and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Customizable UI</h3>
+                    <p>Resize the overlay, change font size, switch between Light and Dark themes. Make it yours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🪶</div>
+                    <h3>Lightweight</h3>
+                    <p>Minimal CPU usage with smart change detection. Only translates when screen content actually changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使い方セクション -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">How It Works</div>
+                <h2>Three Steps to<br><span class="gradient-text">Instant Translation</span></h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Select Languages</h3>
+                    <p>Choose your source and target languages from the home screen. Auto-detect is available for the source.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Drag to Select Area</h3>
+                    <p>Click the capture button and drag to select the region of your screen you want to translate.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Read & Resize</h3>
+                    <p>A floating overlay appears with the translation. Drag to move, resize from edges, and read naturally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 広告スペース 2 -->
+    <div class="ad-container" id="ad-middle">
+        <div class="ad-placeholder">
+            <span>Ad Space — Replace with Google AdSense code</span>
+        </div>
+    </div>
+
+    <!-- 料金セクション -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">Pricing</div>
+                <h2>Simple,<br><span class="gradient-text">Transparent Pricing</span></h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tag">Free</div>
+                    <div class="pricing-price">$0</div>
+                    <div class="pricing-period">forever</div>
+                    <ul class="pricing-features">
+                        <li>✅ Real-time screen translation</li>
+                        <li>✅ 10+ languages supported</li>
+                        <li>✅ Customizable overlay</li>
+                        <li>✅ Up to 5 FPS capture</li>
+                        <li>✅ Dark theme</li>
+                        <li>⬜ Light theme</li>
+                        <li>⬜ Translation history</li>
+                    </ul>
+                    <a href="#download" class="btn btn-secondary" style="width:100%;">Download Free</a>
+                </div>
+                <div class="pricing-card pricing-card-pro">
+                    <div class="pricing-popular">Most Popular</div>
+                    <div class="pricing-tag">Pro</div>
+                    <div class="pricing-price">$4.99</div>
+                    <div class="pricing-period">one-time purchase</div>
+                    <ul class="pricing-features">
+                        <li>✅ Everything in Free</li>
+                        <li>✅ Up to 30 FPS capture</li>
+                        <li>✅ Light & Dark themes</li>
+                        <li>✅ Translation history</li>
+                        <li>✅ No ads</li>
+                        <li>✅ Priority support</li>
+                        <li>✅ Future updates free</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width:100%;">Get Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ダウンロードセクション -->
+    <section class="download" id="download">
+        <div class="section-container">
+            <div class="download-card">
+                <div class="download-glow"></div>
+                <img src="icon.png" alt="App Icon" class="download-icon">
+                <h2>Ready to Translate?</h2>
+                <p>Download Live AreaTranslator for free and start translating your screen in seconds.</p>
+                <div class="download-buttons">
+                    <a href="https://github.com/rryunosuke0055-wq/Live-AreaTranslator2/releases/latest/download/LiveAreaTranslator-macOS-Latest.zip" class="btn btn-primary btn-large" id="download-macos">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Download for macOS
+                    </a>
+                    <a href="https://github.com/rryunosuke0055-wq/Live-AreaTranslator-Windows/releases/latest/download/LiveAreaTranslator-Windows-Latest.zip" class="btn btn-primary btn-large" id="download-windows" style="background: linear-gradient(135deg, #0078D4 0%, #005A9E 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 12V6.75l8-1.25V12H3zm0 .5h8v6.5l-8-1.25V12.5zM11.5 5.4L21 3.75V12H11.5V5.4zm0 7.1H21v8.25l-9.5-1.65V12.5z"/></svg>
+                        Download for Windows
+                    </a>
+                </div>
+                <p class="download-note">macOS 10.15+ / Windows 10+ — No Python installation required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 広告スペース 3 -->
+    <div class="ad-container" id="ad-bottom">
+        <div class="ad-placeholder">
+            <span>Ad Space — Replace with Google AdSense code</span>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="icon.png" alt="Logo" class="footer-logo">
+                <span>Live AreaTranslator</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="https://github.com/rryunosuke0055-wq/Live-AreaTranslator2" target="_blank">GitHub</a>
+                <a href="mailto:contact@example.com">Contact</a>
+            </div>
+            <p class="footer-copyright">© 2026 Live AreaTranslator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
